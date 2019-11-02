@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Hello Parcel 
-        link(rel="stylesheet", href="../sass/main.sass")
-    body
 
-        include ./includes/_navbar.pug 
-        
-        div 
-            p Hello form Home  
-        
-        img(src="../images/birthday.png" id="cartoon")
+extends templates/layout.pug
+//- block append config
+//-     - let pageTitles = "Ha Ha"
 
-        //- video(src="../videos/test.mp4")
+block main 
+    +showText("Starboy", "100%")
 
-        include ./includes/_footer.pug
-
-        script(src="../js/index.js")
+mixin showText(text, amount)
+    h2 #{text} is #{amount} great. 
